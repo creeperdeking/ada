@@ -25,4 +25,21 @@ begin
     return 0;
 end poids_mot;
 
+procedure Init_Lexique(Nomfic: in String; L : out Tv_lexique) is
+    --{On suppose que la taille du vecteur L correspond exactement au nombre de mots contenus dans le fichier} => {Range dans le vecteur  L, les mots contenus dans le fichier lexique Nomfic et les poids associés}
+    file : Text_io.file_type;
+    fin : natural;
+    line : String(1..100); -- On sait que la ligne ne dépassera pas 100 caractères
+    cptr : integer := L'first;
+begin
+    open(file, in_file, nomfic);
+    while not end_of_file(file) loop
+        get_line(file, line, fin);
+        L(cptr).chaine := line(1..fin-2);
+        L(cptr).poids := Integer'value(line(fin-1..fin));
+        cptr := cptr +1;
+    end loop;
+    close(file);
+end Init_Lexique;
+
 end p_lexique;
