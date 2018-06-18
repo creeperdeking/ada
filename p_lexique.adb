@@ -1,4 +1,4 @@
-package body p_lexique  is
+package body p_lexique is
 
 function Nb_Mots(nomfic : in String) return Integer is
 -- {} => {résultat nombre de lignes du fichier Nomfic et donc de mots dans le lexique correspondant}
