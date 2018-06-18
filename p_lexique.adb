@@ -1,12 +1,23 @@
-package lexique body is
+package body p_lexique  is
 
-function Nb_Mots(nomfic : in String) return Integer;
-{} => {résultat nombre de lignes du fichier Nomfic et donc de mots dans le lexique correspondant}
+function Nb_Mots(nomfic : in String) return Integer is
+-- {} => {résultat nombre de lignes du fichier Nomfic et donc de mots dans le lexique correspondant}
     file : Text_io.file_type;
+    cptr : integer := 0;
 begin
-    open(file, in_file,nomfic);
+    open(file, in_file, nomfic);
+    while not end_of_file(file) loop
+        cptr := cptr + 1;
+        skip_line(file);
+    end loop;
+    close(file);
+    return cptr;
+end Nb_Mots;
 
-    close();
-end;
+function Poids_Mot(M  : in String; L : in Tv_lexique) return integer is
+--{} => {résultat = le poids de M dans le lexique L est 0 si le mot n'est pas présent dans le lexique}
+begin
+    return 0;
+end poids_mot;
 
-end package;
+end p_lexique;

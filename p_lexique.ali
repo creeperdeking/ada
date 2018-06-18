@@ -1,0 +1,62 @@
+V "GNAT Lib v6"
+P ZX
+
+RN
+RV NO_IO
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV SPARK_05
+
+U p_lexique%b		p_lexique.adb		1bd06a03 NE OO PK IL
+
+U p_lexique%s		p_lexique.ads		0b215d29 EE NE OO PK IL
+W text_io%s		text_io.ads		text_io.ali
+
+D ada.ads		20070406091342 3ffc8e18 ada%s
+D a-except.ads		20151016123252 291912d5 ada.exceptions%s
+D a-ioexce.ads		20140225151544 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20141120112812 119b8fb3 ada.streams%s
+D a-tags.ads		20151016130316 01f5e3ef ada.tags%s
+D a-textio.ads		20140717063745 386df5d4 ada.text_io%s
+D a-unccon.ads		20070406091342 f9eb8f06 ada.unchecked_conversion%s
+D interfac.ads		20151118101227 4be8ce1b interfaces%s
+D i-cstrea.ads		20140801100435 e53d8b8e interfaces.c_streams%s
+D p_lexique.ads		20180618072556 4ef77be0 p_lexique%s
+D p_lexique.adb		20180618072714 552711e3 p_lexique%b
+D system.ads		20151123113124 6326c08a system%s
+D s-crtl.ads		20141120112812 0ebbdb71 system.crtl%s
+D s-exctab.ads		20140225151139 54135002 system.exception_table%s
+D s-ficobl.ads		20140718105747 078245e4 system.file_control_block%s
+D s-parame.ads		20140801093848 7e2a0d7f system.parameters%s
+D s-soflin.ads		20151020124036 14e1eb6c system.soft_links%s
+D s-stache.ads		20140225151139 a37c21ec system.stack_checking%s
+D s-stalib.ads		20151112104907 09bd3940 system.standard_library%s
+D s-stoele.ads		20140225151139 2dc34a04 system.storage_elements%s
+D s-traent.ads		20140730135025 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20140731130224 9d58a4c0 system.unsigned_types%s
+D s-wchcon.ads		20140718092328 1b7d22d2 system.wch_con%s
+D text_io.ads		20070406091342 45d626c9 text_io%s
+X 6 a-textio.ads
+52P9*File_Type 11|5r20
+53n23*In_File{53E9} 11|8r16
+92U14*Open 11|8s5
+98U14*Close 11|13s5
+168U14*Skip_Line 11|11s9
+183V13*End_Of_File{boolean} 11|9s15
+X 10 p_lexique.ads
+2K9*p_lexique 17l5 17e14 11|1b14 23l5 23t14
+4R6*TR_mot 7e11 9r46
+5a1*chaine{string}
+6i1*poids{positive}
+9A6*TV_lexique(4R6)<integer> 14r43 11|17r43
+11V10*Nb_Mots{integer} 11>18 11|3b10 15l5 15t12
+11a18 nomfic{string} 11|3b18 8r25
+14V10*Poids_Mot{integer} 14>20 14>36 11|17b10 21l5 21t14
+14a20 M{string} 11|17b20
+14a36 L{9A6} 11|17b36
+X 11 p_lexique.adb
+5p5 file{6|52P9} 8m10 8r10 9r27 11r19 13m11 13r11
+6i5 cptr{integer} 10m9 10r17 14r12
+X 24 text_io.ads
+24K9*Text_IO=24:29 10|1w6 1r19 11|5r12
+
