@@ -14,8 +14,8 @@ begin
     return cptr;
 end Nb_Mots;
 
-function Poids_Mot(M  : in String; L : in Tv_lexique) return integer is
---{} => {résultat = le poids de M dans le lexique L est 0 si le mot n'est pas présent dans le lexique}
+function Poids_Mot(M : in String; L : in Tv_lexique) return integer is
+--{} => {résultat = le poids de M dans le lexique L ou alors 0 si le mot n'est pas présent dans le lexique}
 begin
     for i in L'range loop
         if L(i).chaine = M then
@@ -25,18 +25,23 @@ begin
     return 0;
 end poids_mot;
 
+
+
 procedure Init_Lexique(Nomfic: in String; L : out Tv_lexique) is
     --{On suppose que la taille du vecteur L correspond exactement au nombre de mots contenus dans le fichier} => {Range dans le vecteur  L, les mots contenus dans le fichier lexique Nomfic et les poids associés}
     file : Text_io.file_type;
     fin : natural;
     line : String(1..100); -- On sait que la ligne ne dépassera pas 100 caractères
     cptr : integer := L'first;
+	ch : String(1..30) := (others => ' ');
 begin
     open(file, in_file, nomfic);
     while not end_of_file(file) loop
+		ch := (others => ' ');
         get_line(file, line, fin);
-        L(cptr).chaine := line(1..fin-2);
-        L(cptr).poids := Integer'value(line(fin-1..fin));
+		ch(1..fin-2) := line(1..fin-2);
+        L(cptr).chaine := ch;
+        L(cptr).poids := Integer'value(line(fin..fin));
         cptr := cptr +1;
     end loop;
     close(file);
