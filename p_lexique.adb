@@ -17,6 +17,11 @@ end Nb_Mots;
 function Poids_Mot(M  : in String; L : in Tv_lexique) return integer is
 --{} => {résultat = le poids de M dans le lexique L est 0 si le mot n'est pas présent dans le lexique}
 begin
+    for i in L'range loop
+        if L(i).chaine = M then
+            return L(i).poids;
+        end if;
+    end loop;
     return 0;
 end poids_mot;
 
