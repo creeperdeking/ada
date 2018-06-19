@@ -89,7 +89,7 @@ end Init_Dico;
         Calcul_Scores(VD, C, dict, N);
 
         -- On trie le dictionnaire
-        create(file, out_file, Fl);
+        create(file, out_file, "lexique/"&Fl);
         while i < dict'first+20 loop
             j := N;
             
