@@ -1,3 +1,5 @@
+with Ada.Float_Text_IO; use Ada.Float_Text_IO;
+
 package body p_lexique is
 
 function Nb_Mots(nomfic : in String) return Integer is

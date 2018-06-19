@@ -1,6 +1,8 @@
 with P_Esiut; use P_Esiut;
 with p_chaine;
 package p_depeche is
+   
+      
       type T_Categorie is (Politique,Sports,Culture,Economie,Science);
    
       type TV_Score is array(T_Categorie) of Integer;
@@ -27,3 +29,4 @@ package p_depeche is
       procedure Decompose(C : in p_chaine.TR_Chaine_Longue; V : out TV_mot;N : out natural);
                   
 end p_depeche;
+

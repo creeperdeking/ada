@@ -7,7 +7,9 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV SPARK_05
 
-U p_lexique%b		p_lexique.adb		3c691d23 NE OO PK IL
+U p_lexique%b		p_lexique.adb		b4676959 NE OO PK IL
+W ada%s			ada.ads			ada.ali
+W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
 W system.val_int%s	s-valint.adb		s-valint.ali
 
 U p_lexique%s		p_lexique.ads		8d3c8ac3 EE NE OO PK IL
@@ -16,16 +18,18 @@ W text_io%s		text_io.ads		text_io.ali
 
 D ada.ads		20070406091342 3ffc8e18 ada%s
 D a-except.ads		20151016123252 291912d5 ada.exceptions%s
+D a-flteio.ads		20070406091342 e18a47a0 ada.float_text_io%s
 D a-ioexce.ads		20140225151544 e4a01f64 ada.io_exceptions%s
 D a-stream.ads		20141120112812 119b8fb3 ada.streams%s
 D a-tags.ads		20151016130316 01f5e3ef ada.tags%s
 D a-textio.ads		20140717063745 386df5d4 ada.text_io%s
+D a-tiflio.ads		20140717063513 56fbda09 ada.text_io.float_io%s
 D a-unccon.ads		20070406091342 f9eb8f06 ada.unchecked_conversion%s
 D interfac.ads		20151118101227 4be8ce1b interfaces%s
 D i-cstrea.ads		20140801100435 e53d8b8e interfaces.c_streams%s
 D p_esiut.ads		20180618072943 79b955f7 p_esiut%s
 D p_lexique.ads		20180618092002 b153f9fd p_lexique%s
-D p_lexique.adb		20180618092701 8d3ae4de p_lexique%b
+D p_lexique.adb		20180619110719 e4bed704 p_lexique%b
 D system.ads		20151123113124 6326c08a system%s
 D s-crtl.ads		20141120112812 0ebbdb71 system.crtl%s
 D s-exctab.ads		20140225151139 54135002 system.exception_table%s
@@ -40,39 +44,43 @@ D s-unstyp.ads		20140731130224 9d58a4c0 system.unsigned_types%s
 D s-valint.ads		20090409150019 48a52a3f system.val_int%s
 D s-wchcon.ads		20140718092328 1b7d22d2 system.wch_con%s
 D text_io.ads		20070406091342 45d626c9 text_io%s
-X 6 a-textio.ads
-52P9*File_Type 12|5r20 32r20
-53n23*In_File{53E9} 12|8r16 38r16
-92U14*Open 12|8s5 38s5
-98U14*Close 12|13s5 47s5
-168U14*Skip_Line 12|11s9
-183V13*End_Of_File{boolean} 12|9s15 39s15
-244U14*Get_Line 12|41s9
-X 10 p_esiut.ads
-15K11*p_esiut 176e14 11|2w7 2r19
-X 11 p_lexique.ads
-3K9*p_lexique 21l5 21e14 12|1b14 50l5 50t14
+X 1 ada.ads
+16K9*Ada 19e8 14|1r6 1r29
+X 3 a-flteio.ads
+20K13*Float_Text_IO[8|46] 14|1w10 1r33
+X 7 a-textio.ads
+52P9*File_Type 14|7r20 34r20
+53n23*In_File{53E9} 14|10r16 40r16
+92U14*Open 14|10s5 40s5
+98U14*Close 14|15s5 49s5
+168U14*Skip_Line 14|13s9
+183V13*End_Of_File{boolean} 14|11s15 41s15
+244U14*Get_Line 14|43s9
+X 12 p_esiut.ads
+15K11*p_esiut 176e14 13|2w7 2r19
+X 13 p_lexique.ads
+3K9*p_lexique 21l5 21e14 14|3b14 52l5 52t14
 5R6*TR_mot 8e11 10r46
-6a1*chaine{string} 12|21r17 43m17
-7i1*poids{positive} 12|22r25 44m17
-10A6*TV_lexique(5R6)<integer> 15r51 18r43 12|17r42 30r51
-12V10*Nb_Mots{integer} 12>18 12|3b10 15l5 15t12
-12a18 nomfic{string} 12|3b18 8r25
-15U11*Init_Lexique 15>24 15<43 12|30b11 48l5 48t17
-15a24 Nomfic{string} 12|30b24 38r25
-15a43 L{10A6} 12|30b43 35r23 43m9 44m9
-18V10*Poids_Mot{integer} 18>20 18>36 12|17b10 26l5 26t14
-18a20 M{string} 12|17b20 21r26
-18a36 L{10A6} 12|17b35 20r14 21r12 22r20
-X 12 p_lexique.adb
-5p5 file{6|52P9} 8m10 8r10 9r27 11r19 13m11 13r11
-6i5 cptr{integer} 10m9 10r17 14r12
-20i9 i{integer} 21r14 22r22
-32p5 file{6|52P9} 38m10 38r10 39r27 41r18 47m11 47r11
-33i5 fin{natural} 41m30 42r23 42r41 44r45 44r50
-34a5 line{string} 41m24 42r33 44r40
-35i5 cptr{integer} 43r11 44r11 45m9 45r17
-36a9 ch{string} 40m17 42m17 43r27
-X 26 text_io.ads
-24K9*Text_IO=24:29 11|1w6 1r19 12|5r12 32r12
+6a1*chaine{string} 14|23r17 45m17
+7i1*poids{positive} 14|24r25 46m17
+10A6*TV_lexique(5R6)<integer> 15r51 18r43 14|19r42 32r51
+12V10*Nb_Mots{integer} 12>18 14|5b10 17l5 17t12
+12a18 nomfic{string} 14|5b18 10r25
+15U11*Init_Lexique 15>24 15<43 14|32b11 50l5 50t17
+15a24 Nomfic{string} 14|32b24 40r25
+15a43 L{10A6} 14|32b43 37r23 45m9 46m9
+18V10*Poids_Mot{integer} 18>20 18>36 14|19b10 28l5 28t14
+18a20 M{string} 14|19b20 23r26
+18a36 L{10A6} 14|19b35 22r14 23r12 24r20
+X 14 p_lexique.adb
+7p5 file{7|52P9} 10m10 10r10 11r27 13r19 15m11 15r11
+8i5 cptr{integer} 12m9 12r17 16r12
+22i9 i{integer} 23r14 24r22
+34p5 file{7|52P9} 40m10 40r10 41r27 43r18 49m11 49r11
+35i5 fin{natural} 43m30 44r23 44r41 46r45 46r50
+36a5 line{string} 43m24 44r33 46r40
+37i5 cptr{integer} 45r11 46r11 47m9 47r17
+38a9 ch{string} 42m17 44m17 45r27
+X 28 text_io.ads
+24K9*Text_IO=24:29 13|1w6 1r19 14|7r12 34r12
 
