@@ -1,4 +1,5 @@
 with Text_io; use Text_io;
+ with p_esiut;use p_esiut;
 package p_lexique is
 
 type TR_mot is record 
