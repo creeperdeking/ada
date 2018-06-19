@@ -27,6 +27,7 @@ begin
                         trouve := true;
                     end if;
                 end loop;
+                
                 if not trouve then
                     temp_vect(cursor).score := 0;
                     temp_vect(cursor).mot := VD(i).texte(j);
@@ -80,13 +81,28 @@ end Init_Dico;
         N : integer;
         file : text_io.file_type;
         cptr : integer := 0;
+
+        i,j : integer := dict'first;
+        tmp_entree :TR_entree;
     begin 
         Init_Dico(VD, C, dict, N);
         Calcul_Scores(VD, C, dict, N);
-        
+
+        -- On trie le dictionnaire
         create(file, out_file, Fl);
-        for i in dict'first..N loop
-            put_line(file, dict(i).mot(1..IndexSeparateur(dict(i).mot,1))&":"&Integer'image(Poids_Score(dict(i).score)));
+        while i < dict'first+20 loop
+            j := N;
+            
+            while j > i loop
+                if dict(j).score > dict(j-1).score then
+                    tmp_entree := dict(j);
+                    dict(j) := dict(j-1);
+                    dict(j-1) := tmp_entree;
+                end if;
+                j := j-1;
+            end loop;
+            put_line(file, dict(i).mot(1..IndexSeparateur(dict(i).mot,1)-1) & ":" & Integer'image(Poids_Score(dict(i).score))(2..2));
+            i := i+1;
         end loop;
         
     end Generation_Lexique;
