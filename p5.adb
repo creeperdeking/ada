@@ -19,7 +19,6 @@ begin
 	Charge("depeches.txt",depeche);
 	
 	Init_Lexique("lexique/CULTURE2",lexiques(Culture));
-	
 	Init_Lexique("lexique/ECONOMIE2",lexiques(Economie));
 	Init_Lexique("lexique/ENVIRONNEMENT-SCIENCES2",lexiques(Science));
 	Init_Lexique("lexique/POLITIQUE2",lexiques(Politique));

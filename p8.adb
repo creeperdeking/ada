@@ -8,6 +8,7 @@ procedure p8 is
     VD : Tv_Depeche;
 begin
     Charge("depeches.txt", VD);
+    
     Generation_Lexique(VD, Culture, "CULTURE2");
     Generation_Lexique(VD, Economie, "ECONOMIE2");
     Generation_Lexique(VD, Science, "ENVIRONNEMENT-SCIENCES2");

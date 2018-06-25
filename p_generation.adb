@@ -65,9 +65,9 @@ end Init_Dico;
     begin 
         if S < 0 then
             poids := 0;
-        elsif S < 10 then
+        elsif S < 5 then
             poids := 1;
-        elsif S < 20 then
+        elsif S < 10 then
             poids := 2;
         else
             poids := 3;
@@ -104,6 +104,7 @@ end Init_Dico;
             put_line(file, dict(i).mot(1..IndexSeparateur(dict(i).mot,1)-1) & ":" & Integer'image(Poids_Score(dict(i).score))(2..2));
             i := i+1;
         end loop;
+        close(file);
         
     end Generation_Lexique;
 end p_generation;

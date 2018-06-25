@@ -19,12 +19,12 @@ procedure p4 is
 begin
 	Charge("depeches.txt",depeche);
 	
-	Init_Lexique("lexique/CULTURE2",lexiques(Culture));
+	Init_Lexique("lexique/CULTURE",lexiques(Culture));
 	
-	Init_Lexique("lexique/ECONOMIE2",lexiques(Economie));
-	Init_Lexique("lexique/ENVIRONNEMENT-SCIENCES2",lexiques(Science));
-	Init_Lexique("lexique/POLITIQUE2",lexiques(Politique));
-	Init_Lexique("lexique/SPORT2",lexiques(Sports));
+	Init_Lexique("lexique/ECONOMIE",lexiques(Economie));
+	Init_Lexique("lexique/ENVIRONNEMENT-SCIENCES",lexiques(Science));
+	Init_Lexique("lexique/POLITIQUE",lexiques(Politique));
+	Init_Lexique("lexique/SPORT",lexiques(Sports));
 
 	for i in depeche'range loop
 		for cat in  Politique..Science loop

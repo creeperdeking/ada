@@ -27,9 +27,9 @@ D a-tiflio.ads		20140717063513 56fbda09 ada.text_io.float_io%s
 D a-unccon.ads		20070406091342 f9eb8f06 ada.unchecked_conversion%s
 D interfac.ads		20151118101227 4be8ce1b interfaces%s
 D i-cstrea.ads		20140801100435 e53d8b8e interfaces.c_streams%s
-D p_esiut.ads		20180618072943 79b955f7 p_esiut%s
-D p_lexique.ads		20180618092002 b153f9fd p_lexique%s
-D p_lexique.adb		20180619110719 e4bed704 p_lexique%b
+D p_esiut.ads		20180618070102 79b955f7 p_esiut%s
+D p_lexique.ads		20180619083107 b153f9fd p_lexique%s
+D p_lexique.adb		20180619111130 e4bed704 p_lexique%b
 D system.ads		20151123113124 6326c08a system%s
 D s-crtl.ads		20141120112812 0ebbdb71 system.crtl%s
 D s-exctab.ads		20140225151139 54135002 system.exception_table%s
